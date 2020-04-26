@@ -14,7 +14,7 @@ $password2 = "";
 $date = ""; 
 $error_array = "";
 
-if(isset($_POST("reg_btn"))){
+if(isset($_POST['reg_btn'])){
 
     //firstname
     $fname = strip_tags($_POST["reg_fname"]); //Remove HTML Tags
@@ -44,6 +44,44 @@ if(isset($_POST("reg_btn"))){
 
     $date = date("d-m-Y"); // Get current date
 
+    if($em == $em2){
+        if(filter_var($em, FILTER_VALIDATE_EMAIL)){
+
+            $em = filter_var($em,FILTER_VALIDATE_EMAIL);
+            //Check if e-mail already exists
+            $e_check = mysqli_query($con,"SELECT email FROM users WHERE email='$em'");
+
+            $num_rows = mysqli_num_rows($e_check);
+
+            if($num_rows > 0){
+                echo "Email already in use";    
+            }
+        }
+        else{
+            echo "Invalid email format";
+        }
+    }
+    else{
+        echo "Emails don't match";
+    }
+
+    if(strlen($fname) > 25 || strlen($fname) < 2){
+        echo "Your first name must be between 2 and 25 characters";
+    };
+    if(strlen($lname) > 25 || strlen($lname) < 2){
+        echo "Your last name must be between 2 and 25 characters";
+    }
+    if($password != $password2){
+        echo "Your passwords do not match";
+    }
+    else {
+        if(preg_match('/[^A-Za-z0-9]/',$password)){
+            echo "Your password can only contain only english characters or numbers";
+        }
+    }
+    if(strlen($password > 30) || strlen($password <5)){
+        echo "Your password must be between 5 and 30 characters";
+    }
 }
 ?>
 <DOCTYPE html>
