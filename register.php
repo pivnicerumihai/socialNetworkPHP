@@ -1,13 +1,6 @@
 <?php
-opcache_reset();
 
-session_start();
-
-$con = mysqli_connect("localhost","root","mitzap9080","social");
-
-if(mysqli_connect_errno()){
-    echo "Failed to Connect ".mysqli_connect_errno();
-}
+require 'config/config.php';
 
 $fname = "";
 $lname = "";
