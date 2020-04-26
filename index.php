@@ -1,5 +1,6 @@
 <?php
 opcache_reset();
+
 $con = mysqli_connect("localhost","root","mitzap9080","social");
 
 if(mysqli_connect_errno()){
