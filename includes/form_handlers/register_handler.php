@@ -93,17 +93,9 @@ if(isset($_POST['reg_btn'])){
             $username = $username . "_" . $i;
             $check_username_query = mysqli_query($con,"SELECT username FROM users WHERE username = '$username'");
         }
-        $random = rand(1,2);
         
-        switch($random){
-            case 1:
-                $profile_pic = '../../../Social-Site/assets/images/profile_pics/defaults/head_deep_blue.png';
-            break;
-            case 2:
-                $profile_pic = "../../../Social-Site/assets/images/profile_pics/defaults/head_amethyst.png";
-            break;
+        $profile_pic = '../../../Social-Site/assets/images/profile_pics/defaults/head_pomegranate.png';
 
-        }
         $query = mysqli_query($con, "INSERT INTO users VALUES(NULL,'$fname','$lname','$username','$em','$password','$date','$profile_pic','0','0','no',',')");
         array_push($error_array,"<span style='color: #14C800 '>Account successfully created. You can now log in!</span>");
 

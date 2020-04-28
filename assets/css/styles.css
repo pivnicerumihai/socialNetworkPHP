@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body{
-    line-height: 37px;
+    /* line-height: 37px; */
     background-color: #e8e8e8e8;
 }
 .top_bar{
@@ -20,8 +20,7 @@ body{
     font-family: 'Bangers', cursive;
     margin-left:10px;
     font-size:40px;
-    position: relative;
-    top:9px;
+
     text-shadow:#160c0c 2px 1px 0px ;
     color:#8d6161;
 }
@@ -77,4 +76,69 @@ nav a:hover{
     border-radius: 7px;
     box-shadow: 2px 2px 1px #d3d3d3;
     z-index: -1;
+}
+
+.user_details {
+    width:290px;
+    float:left;
+    margin-bottom: 20px;
+}
+
+.user_details_left_right{
+    width:125px;
+    display:inline-block;
+    position: absolute;
+}
+
+.user_details img {
+    height:125px;
+    border-radius:10px;
+    margin-right:5px;
+}
+
+.main_column{
+    float:right;
+    width:70%;
+    z-index:-1;
+    min-height:160px;
+}
+
+.post_form {
+    width:100%;
+}
+
+.post_form textarea{
+    width:80%;
+    height:60px;
+    border-radius: 5px;
+    margin-right:5px;
+    border:1px solid #d3d3d3;
+    font-size:12px;
+    padding:5px;
+}
+
+.post_form textarea:focus{
+    outline:none;
+}
+
+.post_form input[type="submit"]{
+    width: 10%;
+    height: 60px;
+    border: none;
+    border-radius:10px;
+    background-color:#643434;
+    font-family:'Bangers', cursive;
+    color: #8d6161;
+    text-shadow: #160c0c 2px 1px 0px;
+    font-size:160%;
+    position: absolute;
+    outline:0;
+    margin:0;
+}
+.post_form input[type="submit"]:hover{
+    color:#160c0c;
+}
+
+.post_form input[type="submit"]:active{
+    padding:8px 6px 6px 8px;
 }
