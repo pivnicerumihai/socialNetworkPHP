@@ -3,6 +3,7 @@
 require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
 require 'includes/form_handlers/login_handler.php';
+
 ?>
 <DOCTYPE html>
 <html>
@@ -48,12 +49,13 @@ if(isset($_POST["reg_btn"])){
                 <br/>
                 <input type="password" name="log_password" placeholder="Password"/>
                 <br/>
-                <input type="submit" name="login_button" value="Login"/>
                 <?php 
-                if(in_array("Email or password was incorrect <br/>",$error_array)){
+                if(in_array("Email or password was incorrect<br>",$error_array)){
                     echo "Email or password was incorrect <br/>";
                 }
                 ?>
+                <input type="submit" name="login_button" value="Login"/>
+               
                 <br/>
                 <a href="#" id="signup" class="signup">Need an account? Register here!</a>
             </form>

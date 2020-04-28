@@ -1,15 +1,12 @@
 <?php
 
-require 'config/config.php';
+include("includes/header.php");
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Social Website</title>
-</head>
-<body>
-<p>testing</p>
-</body>
+         <div class="user_details column">
+             <a href="#"><img src="<?php echo $user['profile_pic'];?>"/></a>
+         </div>
+</div>
+</body>    
 </html>

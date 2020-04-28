@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{
+    line-height: 37px;
+    background-color: #e8e8e8e8;
+}
+.top_bar{
+    width:100%;
+    min-width:1050px;
+    height:55px;
+    background-color:#643434;
+    border-bottom: 0.15em solid #8d6161;
+    margin: 0 0 10px 0;
+    display:inline-flex;
+    position:fixed;
+    z-index:10;
+}
+
+.logo a{
+    font-family: 'Bangers', cursive;
+    margin-left:10px;
+    font-size:40px;
+    position: relative;
+    top:9px;
+    text-shadow:#160c0c 2px 1px 0px ;
+    color:#8d6161;
+}
+
+a:hover{
+    text-decoration: none;
+   
+}
+
+.logo a:hover{
+    color:#160c0c;
+}
+
+nav {
+    float:right;
+    right:1px;
+    position: absolute;
+    margin:10;
+}
+
+nav a{
+    position:relative;
+    color:#fff;
+    text-decoration: none;
+    font-size:17px;
+}
+nav a:hover{
+    border-bottom: 7px solid #8d6161;
+}
+
+.fas, .far{
+    color:white;
+    margin-top:9px;
+}
+.fas:hover, .far:hover{
+    color:white;
+}
+
+.wrapper {
+    margin:0 auto;
+    margin-top:10px;
+    position: relative;
+    top:100px;
+    padding:0 10px;
+    width:75%;
+    min-width: 950px;
+}
+
+.column {
+    background-color:white;
+    padding:12px;
+    border:1px solid white;
+    border-radius: 7px;
+    box-shadow: 2px 2px 1px #d3d3d3;
+    z-index: -1;
+}

@@ -85,7 +85,7 @@ if(isset($_POST['reg_btn'])){
 
     if(empty($error_array)){
         $password = md5($password);
-        $username = strtolower($fname . "_" . "lname");
+        $username = strtolower($fname . "_" . $lname);
         $check_username_query = mysqli_query($con,"SELECT username FROM users WHERE username = '$username'");
         $i = 0;
         while(mysqli_num_rows($check_username_query) != 0){
@@ -94,12 +94,13 @@ if(isset($_POST['reg_btn'])){
             $check_username_query = mysqli_query($con,"SELECT username FROM users WHERE username = '$username'");
         }
         $random = rand(1,2);
+        
         switch($random){
             case 1:
-                $profile_pic = "E:\Apps\WAMP\apache2\htdocs\Social-Site\assets\images\profile_pics\defaults\head_deep_blue.png";
+                $profile_pic = '../../../Social-Site/assets/images/profile_pics/defaults/head_deep_blue.png';
             break;
             case 2:
-                $profile_pic = "E:\Apps\WAMP\apache2\htdocs\Social-Site\assets\images\profile_pics\defaults\head_carrot.png";
+                $profile_pic = "../../../Social-Site/assets/images/profile_pics/defaults/head_amethyst.png";
             break;
 
         }
