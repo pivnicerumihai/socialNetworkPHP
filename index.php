@@ -95,7 +95,7 @@ if(isset($_POST['post'])){
          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
          rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
      );
- }
+ };
 });
 
      </script>

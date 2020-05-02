@@ -80,9 +80,11 @@ class Post {
 				$added_by_obj = new User($this->con, $added_by);
 				if($added_by_obj->isClosed()) {
 					continue;
-				}
-
-				
+        }
+        
+        $user_logged_obj = new User($this->con, $userLoggedIn);
+						
+        if($user_logged_obj->isFriend($added_by)){
 
 					if($num_iterations++ < $start)
 						continue; 
@@ -114,7 +116,7 @@ class Post {
 						else 
 							$time_message = $interval->y . " years ago"; //1+ year ago
 					}
-					else if ($interval-> m >= 1) {
+					else if ($interval->m >= 1) {
 						if($interval->d == 0) {
 							$days = " ago";
 						}
@@ -182,7 +184,7 @@ class Post {
 
 							</div>
 							<hr>";
-				
+        }
 
 			} //End while loop
 
